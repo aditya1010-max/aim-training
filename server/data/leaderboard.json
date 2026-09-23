@@ -1,0 +1,14 @@
+[
+  {
+    "id": "b4a5097c-fb4f-4e61-a860-c1a3012eeaa8",
+    "playerName": "Player",
+    "score": 6,
+    "createdAt": "2026-09-23T09:39:24.704Z"
+  },
+  {
+    "id": "e276d988-4d23-42aa-9ca7-655f5186dc37",
+    "playerName": "Player",
+    "score": 4,
+    "createdAt": "2026-09-23T09:38:43.010Z"
+  }
+]
