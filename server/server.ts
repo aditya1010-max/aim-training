@@ -9,15 +9,26 @@ import {
 import cors from "cors";
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://aim-training.buildkiwi.space",
+];
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error("Not allowed by CORS"));
+    },
   }),
 );
 
-app.use(express.json());
 app.use(express.json());
 
 app.get("/api/health", (_req, res) => {

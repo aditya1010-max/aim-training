@@ -1,5 +1,11 @@
 [
   {
+    "id": "e3cea122-e8cb-4440-a387-8ae57e8c4e4d",
+    "playerName": "Player",
+    "score": 14,
+    "createdAt": "2026-09-23T11:40:07.024Z"
+  },
+  {
     "id": "b4a5097c-fb4f-4e61-a860-c1a3012eeaa8",
     "playerName": "Player",
     "score": 6,

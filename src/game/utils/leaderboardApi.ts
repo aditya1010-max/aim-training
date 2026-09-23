@@ -1,6 +1,6 @@
 import type { LeaderboardEntry } from "../types/leaderboard";
 
-const API_URL = "http://localhost:3000/api/leaderboard";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/leaderboard`;
 
 export async function getLeaderboard(): Promise<LeaderboardEntry[]> {
   const response = await fetch(API_URL);
