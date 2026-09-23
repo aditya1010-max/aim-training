@@ -5,13 +5,20 @@ import { INITIAL_GAME_STATE } from "../state/initialGameState";
 import type { GameState } from "../types/game";
 import { generateRandomTargetPosition } from "../utils/gameUtils";
 
-export function useGame() {
+interface UseGameOptions {
+  onGameFinished?: (score: number) => void;
+}
+
+export function useGame(options: UseGameOptions = {}) {
+  const { onGameFinished } = options;
+
   const [gameState, setGameState] = useState<GameState>(INITIAL_GAME_STATE);
 
   const startGame = useCallback(() => {
     setGameState({
       ...INITIAL_GAME_STATE,
       status: "playing",
+      targetPosition: generateRandomTargetPosition(),
     });
   }, []);
 
@@ -60,10 +67,19 @@ export function useGame() {
     };
   }, [gameState.status]);
 
+  useEffect(() => {
+    if (gameState.status !== "finished") {
+      return;
+    }
+
+    onGameFinished?.(gameState.score);
+  }, [gameState.status, gameState.score, onGameFinished]);
+
   return {
     gameState,
     startGame,
     hitTarget,
     restartGame,
+    lastScore: gameState.status === "finished" ? gameState.score : null,
   };
 }
