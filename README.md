@@ -6,28 +6,28 @@ The project is being built with a focus on a clean React architecture, scalable 
 
 ## Tech Stack
 
-* React
-* TypeScript
-* Vite
-* ESLint
-* Prettier
-* Docker
-* Nginx
+- React
+- TypeScript
+- Vite
+- ESLint
+- Prettier
+- Docker
+- Nginx
 
 ## Project Goals
 
 The goal is to build a small but scalable aim-training platform with game modes that can eventually include:
 
-* Target clicking
-* Accuracy tracking
-* Reaction time
-* Timed sessions
-* Increasing difficulty
-* Different training modes
-* Score tracking
-* Performance statistics
+- Target clicking
+- Accuracy tracking
+- Reaction time
+- Timed sessions
+- Increasing difficulty
+- Different training modes
+- Score tracking
+- Performance statistics
 
-```
+````
 
 ## Development
 
@@ -36,7 +36,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/aditya1010-max/aim-training.git
 cd aim-training
-```
+````
 
 Install dependencies:
 
@@ -102,34 +102,33 @@ http://localhost:8080
 
 The Docker configuration is maintained separately so the same application can also be deployed as a container when needed.
 
-
 ### Core Game
 
-* [ ] Game state model
-* [ ] Target system
-* [ ] Game board
-* [ ] Timer
-* [ ] Hit detection
-* [ ] Score system
-* [ ] Accuracy tracking
-* [ ] Session completion
+- [ ] Game state model
+- [ ] Target system
+- [ ] Game board
+- [ ] Timer
+- [ ] Hit detection
+- [ ] Score system
+- [ ] Accuracy tracking
+- [ ] Session completion
 
 ### Training Features
 
-* [ ] Reaction-time tracking
-* [ ] Difficulty scaling
-* [ ] Multiple game modes
-* [ ] Moving targets
-* [ ] Target size variation
-* [ ] Performance statistics
-* [ ] High scores
+- [ ] Reaction-time tracking
+- [ ] Difficulty scaling
+- [ ] Multiple game modes
+- [ ] Moving targets
+- [ ] Target size variation
+- [ ] Performance statistics
+- [ ] High scores
 
 ### Future
 
-* [ ] Persistent player statistics
-* [ ] User accounts
-* [ ] Leaderboards
-* [ ] Additional training modes
+- [ ] Persistent player statistics
+- [ ] User accounts
+- [ ] Leaderboards
+- [ ] Additional training modes
 
 ## License
 

@@ -9,5 +9,5 @@ export interface GameState {
   status: GameStatus;
   score: number;
   timeRemaining: number;
-  kiwiPosition: Position;
+  targetPosition: Position;
 }

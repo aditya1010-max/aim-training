@@ -2,23 +2,23 @@ import type { GameState } from "../types/game";
 
 interface GameBoardProps {
   gameState: GameState;
-  onCatchKiwi: () => void;
+  onhitTarget: () => void;
 }
 
-function GameBoard({ gameState, onCatchKiwi }: GameBoardProps) {
-  const { kiwiPosition } = gameState;
+function GameBoard({ gameState, onhitTarget }: GameBoardProps) {
+  const { targetPosition } = gameState;
 
   return (
-    <section className="game-board" aria-label="Kiwi Catch game">
+    <section className="game-board" aria-label="target Catch game">
       <button
         type="button"
-        className="game-board__kiwi"
+        className="game-board__target"
         style={{
-          left: `${kiwiPosition.x}%`,
-          top: `${kiwiPosition.y}%`,
+          left: `${targetPosition.x}%`,
+          top: `${targetPosition.y}%`,
         }}
-        onClick={onCatchKiwi}
-        aria-label="Catch kiwi"
+        onClick={onhitTarget}
+        aria-label="Catch target"
       >
         🥝{" "}
       </button>{" "}

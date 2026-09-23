@@ -5,7 +5,7 @@ export const INITIAL_GAME_STATE: GameState = {
   status: "idle",
   score: 0,
   timeRemaining: GAME_CONFIG.duration,
-  kiwiPosition: {
+  targetPosition: {
     x: 50,
     y: 50,
   },

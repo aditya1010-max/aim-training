@@ -3,7 +3,7 @@ import { useGame } from "./game/hooks/useGame";
 import "./App.css";
 
 function App() {
-  const { gameState, startGame, catchKiwi } = useGame();
+  const { gameState, startGame, hitTarget } = useGame();
 
   return (
     <main className="app">
@@ -15,7 +15,7 @@ function App() {
       <button type="button" onClick={startGame}>
         Start Game
       </button>
-      <GameBoard gameState={gameState} onCatchKiwi={catchKiwi} />
+      <GameBoard gameState={gameState} onhitTarget={hitTarget} />
     </main>
   );
 }

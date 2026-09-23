@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { GAME_CONFIG } from "../config/gameConfig";
 import { INITIAL_GAME_STATE } from "../state/initialGameState";
 import type { GameState } from "../types/game";
-import { generateRandomPosition } from "../utils/gameUtils";
+import { generateRandomTargetPosition } from "../utils/gameUtils";
 
 export function useGame() {
   const [gameState, setGameState] = useState<GameState>(INITIAL_GAME_STATE);
@@ -15,7 +15,7 @@ export function useGame() {
     });
   }, []);
 
-  const catchKiwi = useCallback(() => {
+  const hitTarget = useCallback(() => {
     setGameState((currentState) => {
       if (currentState.status !== "playing") {
         return currentState;
@@ -23,8 +23,8 @@ export function useGame() {
 
       return {
         ...currentState,
-        score: currentState.score + GAME_CONFIG.pointsPerCatch,
-        kiwiPosition: generateRandomPosition(),
+        score: currentState.score + GAME_CONFIG.pointsPerHit,
+        targetPosition: generateRandomTargetPosition(),
       };
     });
   }, []);
@@ -63,7 +63,7 @@ export function useGame() {
   return {
     gameState,
     startGame,
-    catchKiwi,
+    hitTarget,
     restartGame,
   };
 }
