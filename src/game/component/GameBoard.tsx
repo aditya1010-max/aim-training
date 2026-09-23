@@ -2,10 +2,10 @@ import type { GameState } from "../types/game";
 
 interface GameBoardProps {
   gameState: GameState;
-  onhitTarget: () => void;
+  onHitTarget: () => void;
 }
 
-function GameBoard({ gameState, onhitTarget }: GameBoardProps) {
+function GameBoard({ gameState, onHitTarget }: GameBoardProps) {
   const { targetPosition } = gameState;
 
   return (
@@ -17,11 +17,16 @@ function GameBoard({ gameState, onhitTarget }: GameBoardProps) {
           left: `${targetPosition.x}%`,
           top: `${targetPosition.y}%`,
         }}
-        onClick={onhitTarget}
-        aria-label="Catch target"
+        onClick={onHitTarget}
+        aria-label="Hit target"
       >
-        🥝{" "}
-      </button>{" "}
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" />
+          <circle cx="50" cy="50" r="30" />
+          <circle cx="50" cy="50" r="15" />
+          <circle cx="50" cy="50" r="5" />
+        </svg>
+      </button>
     </section>
   );
 }

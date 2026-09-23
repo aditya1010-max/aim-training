@@ -21,9 +21,9 @@
   height: 500px;
   margin: 2rem auto 0;
   overflow: hidden;
-  border: 2px solid #d1d5db;
+  border: 2px solid #acbcd5;
   border-radius: 16px;
-  background: #ecfdf5;
+  background: #cdfce7;
 }
 
 .game-board__target {
@@ -50,4 +50,52 @@
 .game-board__target:focus-visible {
   outline: 3px solid #111827;
   outline-offset: 4px;
+}
+
+.leaderboard {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+.leaderboard h2 {
+  margin: 0 0 1rem;
+}
+
+.leaderboard__list {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.leaderboard__entry {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.game-layout .game-board {
+  margin: 0;
+}
+
+.game-layout .leaderboard {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .game-layout .leaderboard {
+    max-width: 800px;
+  }
 }
